@@ -2,7 +2,6 @@ import os
 import streamlit as st
 import joblib
 import numpy as np
-import pandas as pd
 
 # 1. Load the model directly (no backend needed)
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "medical_model.pkl")
@@ -28,17 +27,12 @@ st.sidebar.header("📋 Patient Biometrics Input")
 age = st.sidebar.slider("Age", min_value=1, max_value=100, value=45)
 bmi = st.sidebar.slider("Body Mass Index (BMI)", min_value=10.0, max_value=50.0, value=24.5, step=0.1)
 blood_pressure = st.sidebar.slider("Systolic Blood Pressure", min_value=80, max_value=200, value=120)
-cholesterol = st.sidebar.selectbox("Cholesterol Level", options=["Normal", "High", "Critical"])
 
-# Convert text dropdown choices to numeric categories for the model payload
-chol_mapping = {"Normal": 0, "High": 1, "Critical": 2}
-
-# 4. Package the inputs into a structured array
+# 4. Package the inputs into a structured array (3 features matching the trained model)
 features = np.array([[
     age,
     bmi,
-    blood_pressure,
-    chol_mapping[cholesterol]
+    blood_pressure
 ]])
 
 st.subheader("🔍 Real-time Inference Analysis")
