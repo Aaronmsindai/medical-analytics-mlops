@@ -13,9 +13,7 @@ The Streamlit app runs the trained model **in-process** for the demo, ensuring r
 ```bash
 docker-compose up --build
 
-📸 App Preview
 
-<img width="1676" height="974" alt="Screenshot 2026-09-16 at 5 47 49 PM" src="https://github.com/user-attachments/assets/c647a144-2766-4200-8f13-6a7f258ee48c" />
 
 
 ---
