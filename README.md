@@ -1,4 +1,4 @@
-![MLOps CI Status](https://github.com/Deodael/medical-analytics-mlops/actions/workflows/test.yml/badge.svg)
+![MLOps CI Status](https://github.com/Aaronmsindai/medical-analytics-mlops/actions/workflows/test.yml/badge.svg)
 
 # 🏥 Medical Analytics MLOps Pipeline
 
