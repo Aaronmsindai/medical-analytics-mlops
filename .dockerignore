@@ -1,0 +1,14 @@
+.venv/
+.venv-1/
+venv/
+.git/
+.gitignore
+__pycache__/
+*.pyc
+.env
+.pytest_cache/
+.DS_Store
+.vscode/
+notebooks/
+*.md
+!README.md
